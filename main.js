@@ -21,11 +21,11 @@ window.onload = function() {
     var fromPos = view.center;
     var size = 150;
 
-    if (typeof parent !== 'undefined') {
-      posX += parent.x;
-      posY += parent.y;
-      fromPos = [parent.x, parent.y];
-    }
+    // if (typeof parent !== 'undefined') {
+    //   posX += parent.x;
+    //   posY += parent.y;
+    //   fromPos = [parent.x, parent.y];
+    // }
 
     var raster = new Raster({
       source: 'http://placeimg.com/'+size+'/'+size+'/animals',
@@ -67,13 +67,13 @@ window.onload = function() {
 
   // var kitty = createNode(view.center.x - 200, 100, 150);
   // createNode(80, 80, 50, kitty);
-  // createNode(view.center.x + 200, 100, 150);
+  createNode(view.center.x + 200, 100, 150);
 
-  // createNode(view.center.x - 300, 300, 150);
-  // createNode(view.center.x + 300, 300, 150);
+  createNode(view.center.x - 300, 300, 150);
+  createNode(view.center.x + 300, 300, 150);
 
-  // createNode(view.center.x - 400, 600, 150);
-  // createNode(view.center.x + 400, 600, 150);
+  createNode(view.center.x - 400, 600, 150);
+  createNode(view.center.x + 400, 600, 150);
 
   Object.keys(links).forEach(function(key) {
     console.log(key, links[key]);
