@@ -2,6 +2,8 @@ html,
 body {
 	margin: 0
 	padding: 0
+  font-family: 'Source Code Pro', sans-serif;
+  font-weight: 100
 
   main {
     height: 100vh
@@ -35,7 +37,6 @@ vertical-align() {
     margin: 0
     color: #fff
     vertical-align()
-    font-family: sans-serif
     text-align: center
   }
 
@@ -48,6 +49,7 @@ vertical-align() {
       margin: 0 3px
       &:hover {
         color: #FF875F
+        // TODO: on hover change .bottom background color to #FF875F using a transition of .5 seconds
       }
     }
   }
