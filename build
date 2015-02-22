@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $1 == "debug" ]; then
+if [ "$1" == "debug" ]; then
   echo "#### DEBUG MODE ACTIVATED ####"
   sass -r sass-globbing --watch assets/sass:assets/css -t expanded
 else
