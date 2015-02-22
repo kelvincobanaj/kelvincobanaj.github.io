@@ -1,10 +1,6 @@
 @import "vendor/bourbon/bourbon"
 @import "vendor/jeet/index"
-
-@import "vendor/*"
-@import "vars/*"
-@import "layouts/*"
-@import "components/*"
+@import "vendor/normalize"
 
 body
   font-family: 'Roboto', sans-serif
@@ -16,9 +12,9 @@ body
   .photowrapp
     padding-top: 46px
   img
-    width: 200px
-    height: 200px
-    border-radius: 100px
+    $profile-image-size: 200px
+    +size($profile-image-size)
+    border-radius: $profile-image-size / 2
     border: 5px solid #fff
     display: block
     +center
@@ -76,26 +72,22 @@ body
 .links
   height: 200px
   background: #5E35B1
+  text-align: center
   h1
-    margin: 0
-    padding: 0
-    text-align: center
+    +padding(40px 0 42px)
+    +margin(0)
     font-weight: 200
     font-size: 30px
-    line-height: 100px
     color: #fff
   nav
-    text-align: center
-    padding-top: 25px
     a
       color: #fff
       font-size: 22px
       text-decoration: none
       font-weight: 200
-      padding: 20px
+      +padding(0 20px)
       transition: .3s color
       &:hover
-        // text-decoration: underline
         color: darken(#fff, 30%)
 
 .contact
